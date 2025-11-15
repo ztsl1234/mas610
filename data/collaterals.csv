@@ -1,0 +1,5 @@
+collateral_id,loan_id,collateral_type,collateral_value
+COL-A1,LOAN001,Real Estate,400000.00
+COL-B2,LOAN002,Marketable Securities,300000.00
+COL-C3,LOAN003,Real Estate,750000.00
+COL-D4,LOAN005,Machinery,12000000.00

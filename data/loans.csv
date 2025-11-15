@@ -1,0 +1,6 @@
+loan_id,account_id,loan_type,currency,principal_amount
+LOAN001,ACC001,Term Loan,SGD,500000.00
+LOAN002,ACC002,Revolving Credit,USD,250000.00
+LOAN003,ACC003,Mortgage,SGD,750000.00
+LOAN004,ACC004,Unsecured Personal Loan,SGD,25000.00
+LOAN005,ACC001,Equipment Financing,JPY,15000000.00
