@@ -1,6 +1,7 @@
 import os
 import glob
 import shutil
+from pathlib import Path
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, when, coalesce, lit, current_date
@@ -32,10 +33,14 @@ collateral_schema = StructType([
     StructField("collateral_value", DecimalType(18, 2), True),
 ])
 
+
+# Path of the current file
+BASE_DIR = Path(__file__).resolve().parent
+
 # Load data from CSV files
-accounts_df = spark.read.csv("accounts.csv", header=True, schema=accounts_schema)
-loans_df = spark.read.csv("loans.csv", header=True, schema=loans_schema)
-collateral_df = spark.read.csv("collaterals.csv", header=True, schema=collateral_schema)
+accounts_df = spark.read.csv(f"{BASE_DIR}/data/accounts.csv", header=True, schema=accounts_schema)
+loans_df = spark.read.csv(f"{BASE_DIR}/data/loans.csv", header=True, schema=loans_schema)
+collateral_df = spark.read.csv(f"{BASE_DIR}/data/collaterals.csv", header=True, schema=collateral_schema)
 
 # transform data
 
